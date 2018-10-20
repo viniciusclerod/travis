@@ -1,13 +1,14 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const expect = chai.expect;
+const app = require('../app.js');
 
 chai.use(chaiHttp);
 
-describe('Index Routes', function () {
-    describe('GET /', function () {
+describe('GET routes', () => {
+    describe('index', () => {
         it('success, as expected response OK', function (done) { // <= Pass in done callback
-            chai.request('http://localhost:3000')
+            chai.request(app)
                 .get('/')
                 .end(function (err, res) {
                     expect(res).to.have.status(200);
