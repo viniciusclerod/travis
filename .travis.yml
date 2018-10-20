@@ -9,4 +9,5 @@ before_script:
 
 script: 
   - eslint routes
-  - mocha
+  - npm start
+  - npm test
