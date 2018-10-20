@@ -6,6 +6,9 @@
     "start": "node ./bin/www",
     "test": "mocha"
   },
+  "engines": {
+    "node": "^6"
+  },
   "dependencies": {
     "body-parser": "~1.18.2",
     "chai": "^4.2.0",
